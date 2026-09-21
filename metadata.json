@@ -1,0 +1,6 @@
+{
+  "name": "Student Study Hub",
+  "description": "Comprehensive educational platform offering verified study notes, interactive quizzes with local high-score tracking, multi-subject learning guides, and practical academic calculators for students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
