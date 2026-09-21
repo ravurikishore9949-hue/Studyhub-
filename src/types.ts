@@ -137,5 +137,6 @@ export type ActivePage =
   | 'contact'
   | 'privacy'
   | 'terms'
+  | 'cookies'
   | 'disclaimer'
   | 'copyright';

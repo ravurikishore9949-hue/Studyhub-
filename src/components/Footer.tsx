@@ -109,52 +109,95 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <button
-                  onClick={() => handlePageClick('about')}
-                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                <a
+                  id="footer-link-about"
+                  href="#about"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageClick('about');
+                  }}
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors inline-block"
                 >
                   About Us
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handlePageClick('contact')}
-                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                <a
+                  id="footer-link-contact"
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageClick('contact');
+                  }}
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors inline-block"
                 >
                   Contact Us
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handlePageClick('privacy')}
-                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                <a
+                  id="footer-link-privacy"
+                  href="#privacy"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageClick('privacy');
+                  }}
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors inline-block"
                 >
                   Privacy Policy
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handlePageClick('terms')}
-                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                <a
+                  id="footer-link-terms"
+                  href="#terms"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageClick('terms');
+                  }}
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors inline-block"
                 >
                   Terms of Use
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handlePageClick('disclaimer')}
-                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                <a
+                  id="footer-link-cookies"
+                  href="#cookies"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageClick('cookies');
+                  }}
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors inline-block"
                 >
-                  Educational Disclaimer
-                </button>
+                  Cookie Policy
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handlePageClick('copyright')}
-                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                <a
+                  id="footer-link-disclaimer"
+                  href="#disclaimer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageClick('disclaimer');
+                  }}
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors inline-block"
+                >
+                  Disclaimer
+                </a>
+              </li>
+              <li>
+                <a
+                  id="footer-link-copyright"
+                  href="#copyright"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageClick('copyright');
+                  }}
+                  className="text-xs text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors inline-block"
                 >
                   Copyright Policy
-                </button>
+                </a>
               </li>
             </ul>
           </div>

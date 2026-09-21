@@ -76,7 +76,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           <nav className="hidden md:flex items-center gap-1" aria-label="Main Navigation">
             {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = activePage === item.id;
+              const isActive = item.id === 'about'
+                ? ['about', 'privacy', 'terms', 'cookies', 'disclaimer', 'contact', 'copyright'].includes(activePage)
+                : activePage === item.id;
               return (
                 <button
                   key={item.id}
@@ -85,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all ${
                     isActive
                       ? 'bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:white hover:bg-slate-100 dark:hover:bg-slate-800/60'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
