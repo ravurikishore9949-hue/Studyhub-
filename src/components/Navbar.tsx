@@ -170,14 +170,21 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </div>
 
-          <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-500">
-            <span>Free student educational resources</span>
-            <button
-              onClick={() => handleNavClick('contact')}
-              className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
-            >
-              Contact Us
-            </button>
+          <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
+              <button onClick={() => handleNavClick('privacy')} className="hover:text-indigo-600 dark:hover:text-indigo-400">Privacy</button>
+              <span>&bull;</span>
+              <button onClick={() => handleNavClick('terms')} className="hover:text-indigo-600 dark:hover:text-indigo-400">Terms</button>
+              <span>&bull;</span>
+              <button onClick={() => handleNavClick('cookies')} className="hover:text-indigo-600 dark:hover:text-indigo-400">Cookies</button>
+              <span>&bull;</span>
+              <button onClick={() => handleNavClick('disclaimer')} className="hover:text-indigo-600 dark:hover:text-indigo-400">Disclaimer</button>
+              <span>&bull;</span>
+              <button onClick={() => handleNavClick('contact')} className="hover:text-indigo-600 dark:hover:text-indigo-400 text-indigo-600 dark:text-indigo-400 font-semibold">Contact</button>
+            </div>
+            <div className="text-[11px] text-slate-400">
+              Educational self-study &bull; No fake claims
+            </div>
           </div>
         </div>
       )}

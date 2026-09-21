@@ -150,6 +150,31 @@ export const SearchBarModal: React.FC<SearchBarModalProps> = ({
     });
   });
 
+  // 5. Compliance & Trust Pages
+  const compliancePages: { id: ActivePage; title: string; subtitle: string; snippet: string }[] = [
+    { id: 'privacy', title: 'Privacy Policy', subtitle: 'Compliance & Data Protection', snippet: 'Information we collect, cookies, Google AdSense, and student privacy protection.' },
+    { id: 'terms', title: 'Terms of Use', subtitle: 'Institutional Guidelines', snippet: 'Acceptable use, educational content limitations, intellectual property, and liability.' },
+    { id: 'cookies', title: 'Cookie Policy', subtitle: 'Privacy Choices & Controls', snippet: 'How local storage, advertising cookies, and analytics are used, and how to manage them in your browser.' },
+    { id: 'disclaimer', title: 'Educational Disclaimer', subtitle: 'Academic Disclosures', snippet: 'Important disclosures on calculator estimations, syllabus variations, and informal learning.' },
+    { id: 'contact', title: 'Contact Us', subtitle: 'Student Support & Feedback', snippet: 'Send an inquiry, content correction, or subject suggestion to our educational team.' },
+    { id: 'about', title: 'About Us', subtitle: 'Mission & Transparency', snippet: 'Purpose, open-access principles, and independent educational commitment of Student Study Hub.' },
+  ];
+
+  compliancePages.forEach((cp) => {
+    allItems.push({
+      id: `policy-${cp.id}`,
+      type: 'note',
+      title: cp.title,
+      subtitle: cp.subtitle,
+      snippet: cp.snippet,
+      badge: 'Policy',
+      action: () => {
+        onNavigatePage(cp.id);
+        onClose();
+      }
+    });
+  });
+
   // Filter items
   const filtered = allItems.filter((item) => {
     if (activeFilter !== 'all' && item.type !== activeFilter) return false;
